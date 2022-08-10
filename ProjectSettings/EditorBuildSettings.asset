@@ -32,9 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: 012931dad8eb7e94e86470c48e4cd498
-  - enabled: 1
-    path: Assets/Scenes/TesteFone.unity
-    guid: 3511666170651ce41a31eeb16b426278
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TesteFone.unity
     guid: d24968cff59c6aa409963cef60c9ac85
