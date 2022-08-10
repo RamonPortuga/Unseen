@@ -53,7 +53,11 @@ public class ButtonScript : MonoBehaviour
     public void quitGame()
     {
         SceneManager.LoadScene("ExitConfirmation");
-        //Application.Quit();
+    }
+
+    public void exit()
+    {
+        Application.Quit();
     }
 
     public void Start()
@@ -110,7 +114,18 @@ public class ButtonScript : MonoBehaviour
                 quitGame();
             }
         }
-        
+        else if (SceneManager.GetActiveScene().name == "ExitConfirmation")
+        {
+            if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Application.Quit();
+            }
+            else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                selectMenu();
+            }
+        }
+
         //Essas condicionais serão utilizadas quando o usuário apertar
         //o botão ou tecla para sair do jogo.
         if (Input.GetKeyDown(KeyCode.Escape)){
@@ -134,6 +149,10 @@ public class ButtonScript : MonoBehaviour
             else if (SceneManager.GetActiveScene().name == "Jogo")
             {
                 quitGame();
+            }
+            else if (SceneManager.GetActiveScene().name == "ExitConfirmation")
+            {
+                Application.Quit();
             }
         }
     }
