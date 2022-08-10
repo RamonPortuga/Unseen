@@ -1,0 +1,4 @@
+Esta é uma sala grande com o tamanho de 7 metros por 7 metros. Você começará no 
+canto inferior esquerdo da sala. Ao andar pelo salão, você pode interagir com 
+pessoas, que podem ser funcionários ou visitantes, objetos, obras de artes e 
+jogos. 

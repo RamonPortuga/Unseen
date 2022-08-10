@@ -1828,8 +1828,8 @@ MonoBehaviour:
   gridSizeY: 7
   mensagemText: {fileID: 589993003}
   obras:
-  - {fileID: 758513755}
   - {fileID: 1963224612}
+  - {fileID: 758513755}
   - {fileID: 406224877}
   objetos: []
   indexObraFalsa: 0

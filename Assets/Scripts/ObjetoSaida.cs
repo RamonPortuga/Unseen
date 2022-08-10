@@ -62,7 +62,7 @@ public class ObjetoSaida : MonoBehaviour, IInteragivel
         // Aumenta o índice da obra selecionada e aplica a função módulo para que
         // o índice fique no intervalo [0, n), sendo n o número total de obras
         selectedIndex = aux_mod(selectedIndex + 1, GameManager.GM.obras.Length);
-        GameManager.GM.FalarMensagem( GameManager.GM.obras[selectedIndex].clipeDoNome ); // Faz a voz dizer o nome da obra selecionada
+        GameManager.GM.FalarMensagem(GameManager.GM.obras[selectedIndex].clipeDoNome ); // Faz a voz dizer o nome da obra selecionada
     }
 
     // Seleciona a obra anterior
@@ -70,7 +70,7 @@ public class ObjetoSaida : MonoBehaviour, IInteragivel
         // Diminui o índice da obra selecionada e aplica a função módulo para que
         // o índice fique no intervalo [0, n), sendo n o número total de obras
         selectedIndex = aux_mod(selectedIndex - 1, GameManager.GM.obras.Length);
-        GameManager.GM.FalarMensagem( GameManager.GM.obras[selectedIndex].clipeDoNome ); // Faz a voz dizer o nome da obra selecionada
+        GameManager.GM.FalarMensagem(GameManager.GM.obras[selectedIndex].clipeDoNome ); // Faz a voz dizer o nome da obra selecionada
     }
 
     // Confirma seleção da obra
@@ -88,7 +88,7 @@ public class ObjetoSaida : MonoBehaviour, IInteragivel
         enabled = false;
 
         // Inicia o menu de fim de jogo
-        menuFinal.StartMenu( nome_obra_falsa, clipe_nome_obra_falsa, acertou );
+        menuFinal.StartMenu(nome_obra_falsa, clipe_nome_obra_falsa, acertou);
 
     }
 
@@ -107,5 +107,7 @@ public class ObjetoSaida : MonoBehaviour, IInteragivel
     }
 
     // Função módulo auxiliar. Retorna número positivo com entrada negativa.
-    int aux_mod(int x, int m) { return (x%m + m)%m; }
+    int aux_mod(int x, int m) { 
+        return (x % m + m) % m; 
+    }
 }
