@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Genius.unity
-    guid: 8cc486ede424f9a41b22e6ed870f6d55
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Memoria.unity
     guid: dd4a778f3fa2fde469058a924e93202c
@@ -38,6 +38,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TesteFone.unity
     guid: d24968cff59c6aa409963cef60c9ac85
+  - enabled: 1
+    path: Assets/Scenes/GeniusMenu.unity
+    guid: d335f187a8abd3d418daaea4575daf9e
+  - enabled: 1
+    path: Assets/Scenes/GeniusTester.unity
+    guid: 3511666170651ce41a31eeb16b426278
+  - enabled: 1
+    path: Assets/Scenes/GeniusExitConfirmation.unity
+    guid: 3da8f0b275ee8cf41bd8da7c3e4baa53
+  - enabled: 1
+    path: Assets/Scenes/GeniusInstructions.unity
+    guid: 2d01cde7b53b1554fbad0a46c9171424
+  - enabled: 1
+    path: Assets/Scenes/Genius.unity
+    guid: e0f98e8a3cfa706438602da1880725e0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 791d0d746b2acb643848cd9a5236b33c,
       type: 2}

@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0865b9da16624747b7c5f24b7f72d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigameName: Genius/Testando
+  minigameName: GeniusMenu
   minigameMapName: MemoriaMinigame
   jaVenceu: 0
   pista: {fileID: 2040694127}
@@ -6957,7 +6957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0865b9da16624747b7c5f24b7f72d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigameName: Genius/Testando
+  minigameName: GeniusMenu
   minigameMapName: GeniusMinigame
   jaVenceu: 0
   pista: {fileID: 1093760151}
