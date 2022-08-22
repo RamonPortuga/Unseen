@@ -5,7 +5,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TesterScript : MonoBehaviour {
+public class CardTesterScript : MonoBehaviour {
 
     public GameObject[] testerArray; //Guarda as cartas
     public GameObject activeCard; //Guarda a carta ativa
