@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Genius.unity
-    guid: 8cc486ede424f9a41b22e6ed870f6d55
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Memoria.unity
     guid: dd4a778f3fa2fde469058a924e93202c
@@ -38,6 +38,39 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TesteFone.unity
     guid: d24968cff59c6aa409963cef60c9ac85
+  - enabled: 1
+    path: Assets/Scenes/GeniusMenu.unity
+    guid: d335f187a8abd3d418daaea4575daf9e
+  - enabled: 1
+    path: Assets/Scenes/GeniusTester.unity
+    guid: 3511666170651ce41a31eeb16b426278
+  - enabled: 1
+    path: Assets/Scenes/GeniusExitConfirmation.unity
+    guid: 3da8f0b275ee8cf41bd8da7c3e4baa53
+  - enabled: 1
+    path: Assets/Scenes/GeniusInstructions.unity
+    guid: 2d01cde7b53b1554fbad0a46c9171424
+  - enabled: 1
+    path: Assets/Scenes/Genius.unity
+    guid: e0f98e8a3cfa706438602da1880725e0
+  - enabled: 1
+    path: Assets/Scenes/CardExitConfirmation.unity
+    guid: 1ce03fc3734e8344abaab71be17e0716
+  - enabled: 1
+    path: Assets/Scenes/CardGame.unity
+    guid: 27fc0fb0d7a709946ae077c427134b24
+  - enabled: 1
+    path: Assets/Scenes/CardInstructions.unity
+    guid: 47e18542675c33b4fa9c2a80b6cd8e16
+  - enabled: 1
+    path: Assets/Scenes/CardMenu.unity
+    guid: 2e71171e19f5d89429d2297686f138d9
+  - enabled: 1
+    path: Assets/Scenes/CardPreTester.unity
+    guid: 216590c44a9684f45bc8fe581121874a
+  - enabled: 1
+    path: Assets/Scenes/CardTester.unity
+    guid: d0153a693265c494eb8e350ad971f898
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 791d0d746b2acb643848cd9a5236b33c,
       type: 2}

@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        //transform.Translate (4, 1, 0);
+        //transform.position = new Vector3 (4, 1, 0);
+        //transform.position = new Vector3(4, 1, 0);
+
         // Preenche o objeto de vibração do controle e os objetos de input
         rumble = GetComponent<GamepadRumble>();
         playerInput = GetComponent<PlayerInput>();
@@ -93,26 +97,6 @@ public class PlayerController : MonoBehaviour
 
         return new Vector2(hIn, vIn);
     }
-
-    /*
-    //Executa o radar. É chamada quando o jogador aperta o botão do radar
-    private IEnumerator radar() {
-        radarIsRunning = true; //Tranca o radar para que ele não possa estar rodando mais de uma vez simultaneamente
-
-        // Para cada objeto que não foi interagido ainda, sua AudioSource é tocada para indicar ao jogador que há algo naquela direção a ser feito
-        for(int i = 0; i < interactableObj.Length; i++) {
-            radarSource.transform.position = interactableObj[i].transform.position;
-            radarSource.Play();
-            while(radarSource.isPlaying) {
-                yield return null;
-            }
-        }
-
-        radarIsRunning = false; // Libera o radar para poder ser disparado de novo
-
-        yield break;
-    }
-    */
 
     // Avisa ao jogador que há um objeto interatível logo à frente com um toque sonoro. É chamada quando o jogador se movimenta ou se vira
     private IEnumerator availableInteractionAhead() {
@@ -213,6 +197,14 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
+        //print("Coord X ", coordX);
+        /*
+        Debug.Log("Coord X: ");
+        Debug.Log(coordX);
+        Debug.Log("Coord Y: ");
+        Debug.Log(coordY);
+        */
+
         //Evita imprecisões na posição
         transform.position = new Vector3(
             Mathf.Round(transform.position.x * 1000f)/1000f,
@@ -269,15 +261,6 @@ public class PlayerController : MonoBehaviour
                 //Se for, não faz nada
             }
         }
-
-        /*
-        if(radarAction.WasPressedThisFrame()) {
-            // Chama o radar
-            if(!radarIsRunning) {
-                StartCoroutine( radar() );
-            }
-        }
-        */
 
         if(quitAction.WasPressedThisFrame()) {
             if(currentPista != null) {

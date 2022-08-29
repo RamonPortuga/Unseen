@@ -17,6 +17,8 @@ public class IntroScript : MonoBehaviour {
     PlayerController controller; //Guarda o script PlayerController do jogador
 
     void Start() {
+        //transform.Translate (4, 1, 0);
+        //transform.position = new Vector3 (4, 1, 0);
         playerInput = player.GetComponent<PlayerInput>();
         interagirAction = playerInput.actions.FindAction("Interagir");
         skipAction = playerInput.actions.FindAction("Skip");
