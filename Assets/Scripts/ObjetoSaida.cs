@@ -7,38 +7,68 @@ using UnityEngine.InputSystem;
 public class ObjetoSaida : MonoBehaviour, IInteragivel
 {
     public GameObject painelSaida; // Painel do menu da porta de saída
+    public GameObject confirmacaoSaida;
     public MenuFinal menuFinal; // Script que lida com o menu de fim de jogo
     public Text textSelecaoDeObra; // Texto da seleção de obras
     public AudioClip clipeMenuSaida; // Clipe do menu de saída para a voz sintetizada
     PlayerInput playerInput; // Componente PlayerInput que pega a entrada
     InputAction selecUpAction, selecDownAction, confirmAction, backAction; // Componentes InputAction para os controles do menu da saída
     int selectedIndex; // Indice da obra selecionada atualmente
+    bool avancaParaOFinal = false;
+
+    public bool continuar()
+    {
+        avancaParaOFinal = true;
+        return avancaParaOFinal;
+    }
+
+    public bool voltar()
+    {
+        avancaParaOFinal = false;
+        return avancaParaOFinal;
+    }
+
+    public void controle()
+    {
+        confirmacaoSaida.SetActive(true);
+    }
 
     // Método que será chamado quando o jogador interagir com o objeto
     public void Interagir() {
-        // Ativa o painel do menu da saída
-        painelSaida.SetActive(true);
 
-        // Habilita esse script
-        enabled = true;
+        confirmacaoSaida.SetActive(true);
 
-        // Inicia com a primeira obra sendo selecionada
-        selectedIndex = 0;
-        
-        // Preenche o playerInput
-        playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
-        
-        // Muda o ActionMap atual para o ActionMap do menu de saída
-        playerInput.SwitchCurrentActionMap("MenuSaida");
+        if (avancaParaOFinal)
+        {
+            confirmacaoSaida.SetActive(false);
+            // Ativa o painel do menu da saída
+            painelSaida.SetActive(true);
 
-        // Preenche os InputAction usados pelo script
-        selecUpAction = playerInput.actions.FindAction("SelectionUp");
-        selecDownAction = playerInput.actions.FindAction("SelectionDown");
-        confirmAction = playerInput.actions.FindAction("Confirm");
-        backAction = playerInput.actions.FindAction("Back");
+            // Habilita esse script
+            enabled = true;
 
-        // Faz a voz sintetizada falar o clipe do menu da saída
-        GameManager.GM.FalarMensagem( clipeMenuSaida );
+            // Inicia com a primeira obra sendo selecionada
+            selectedIndex = 0;
+
+            // Preenche o playerInput
+            playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
+
+            // Muda o ActionMap atual para o ActionMap do menu de saída
+            playerInput.SwitchCurrentActionMap("MenuSaida");
+
+            // Preenche os InputAction usados pelo script
+            selecUpAction = playerInput.actions.FindAction("SelectionUp");
+            selecDownAction = playerInput.actions.FindAction("SelectionDown");
+            confirmAction = playerInput.actions.FindAction("Confirm");
+            backAction = playerInput.actions.FindAction("Back");
+
+            // Faz a voz sintetizada falar o clipe do menu da saída
+            GameManager.GM.FalarMensagem(clipeMenuSaida);
+        }
+        else
+        {
+            confirmacaoSaida.SetActive(false);
+        }
     }
 
     public void Update() {
